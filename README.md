@@ -1,102 +1,91 @@
 # OrbitGuard Workforce OS
 
-AI-powered smart attendance and workforce management platform built with biometric face recognition, geofencing, and real-time analytics.
+**OrbitGuard Workforce OS** is a workforce management and attendance system developed to make employee attendance tracking easier and more reliable. The project combines face recognition, GPS-based location verification, and attendance records in a single web application.
 
-## 🚀 Features
+The goal is to reduce manual attendance work and give administrators a convenient way to manage employees and monitor daily attendance.
 
-* Face Recognition Attendance System
-* Ultra-Fast Biometric Scanner
-* Geofence & GPS Validation
-* Check-In / Check-Out Tracking
-* Admin & Employee Role-Based Access
-* Real-Time Attendance Monitoring
-* Employee Profile Management
-* Attendance History & Logs
-* Modern Enterprise Dashboard
-* Supabase Authentication & Database
-* Responsive UI for Desktop & Mobile
+## Key Features
 
-## 👨‍💻 Admin Panel
+- **Face Recognition Attendance:** Detects and recognizes faces during the attendance process.
+- **Location Verification:** Uses GPS coordinates to check whether an employee is within the permitted office area.
+- **Check-In and Check-Out:** Keeps track of employee attendance timings.
+- **Role-Based Access:** Provides separate access for administrators and employees.
+- **Employee Management:** Allows administrators to maintain employee profiles and workforce records.
+- **Attendance History:** Displays attendance records for reviewing previous entries.
+- **Attendance Dashboard:** Presents attendance activity and workforce information in an organized interface.
+- **Responsive Design:** Supports desktop and mobile screen sizes.
+- **Supabase Integration:** Uses Supabase for authentication and database-related functionality.
 
-Admins can:
+## Admin Dashboard
 
-* Register employees
-* Manage workforce records
-* Configure geofence settings
-* View analytics & reports
-* Monitor attendance activity
-* Manage biometric enrollments
+The administrator panel is designed to manage day-to-day workforce operations. Depending on the configured permissions, administrators can register employees, manage employee information, configure attendance locations, review attendance records, and manage biometric enrollment.
 
-## 👤 Employee Panel
+## Employee Dashboard
 
-Employees can:
+Employees can use their dashboard to access their profile, mark attendance through the face scanner, and review their individual check-in and check-out records.
 
-* Mark attendance using face scan
-* View personal attendance history
-* Access personal profile
-* Check check-in / check-out records
+## How Attendance Works
 
-## 🛠️ Tech Stack
+1. The employee opens the attendance scanner.
+2. The application detects the face through the camera.
+3. The system checks the employee's location against the configured office boundary.
+4. After the required validations pass, the application records the attendance.
+5. The attendance information becomes available in the relevant dashboard and history views.
 
-Frontend:
+The exact flow depends on the biometric verification, location permissions, and backend configuration.
 
-* React.js
-* Tailwind CSS
-* React Router
-* Framer Motion
+## Technology Stack
 
-Backend:
+**Frontend**
+- React.js
+- Tailwind CSS
+- React Router
+- Framer Motion
 
-* Node.js
-* Express.js
+**Backend**
+- Node.js
+- Express.js
 
-Database & Auth:
+**Database and Authentication**
+- Supabase
 
-* Supabase
+**Face Recognition**
+- face-api.js
+- TensorFlow.js
 
-Biometric & AI:
+**Location Services**
+- Browser Geolocation API
+- Office radius and polygon-based geofence validation
 
-* face-api.js
-* TensorFlow.js
+## Installation and Setup
 
-## 📍 Geofence System
+Make sure Node.js and npm are installed on your system.
 
-The platform validates employee attendance using:
-
-* GPS location tracking
-* Office radius validation
-* Polygon geofence mapping
-
-## 🔐 Authentication
-
-* Secure role-based login system
-* Admin & Employee access separation
-* Protected routes and private dashboards
-
-## 📸 Biometric Attendance Flow
-
-1. User opens scanner
-2. Face gets detected instantly
-3. GPS validation checks office boundary
-4. Attendance is marked automatically
-5. Real-time logs update in dashboard
-
-## 🌐 Live Demo
-
-GitHub Pages:
-https://shreya841.github.io/Smart-attendence-system/
-
-## 📦 Installation
+Clone the repository and open the project directory:
 
 ```bash
+git clone <your-repository-url>
+cd <your-project-folder>
 npm install
 npm run dev
 ```
 
-## 📄 License
+Configure the required environment variables before running the application. These may include the Supabase project URL, the Supabase public client key, and backend configuration values.
 
-This project is developed for educational and enterprise workforce management purposes.
+For security, never expose a Supabase service-role key or other private credentials in frontend code or a public repository.
 
-## ✨ Developed By
+## Live Demo
 
-Shreya Dwivedi
+[View the project](https://shreya841.github.io/Smart-attendence-system/)
+
+*Note: Attendance, authentication, and database features require the relevant backend services and configuration to be available.*
+
+## Purpose of the Project
+
+This project explores how face recognition and location verification can be used to improve attendance management. It also provides practical experience with frontend development, backend integration, authentication, database operations, and responsive dashboard design.
+
+## Developer
+
+**Shreya Dwivedi**
+
+Software Engineer
